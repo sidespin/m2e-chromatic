@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="m2e.chromatic.feature"
+      label="M2E Chromatic Feature"
+      version="0.0.1.qualifier">
+
+   <description>
+      This feature enables colored output for m2e launch configurations, when the `ANSI Escape in Console` plugin is available.
+   </description>
+
+   <copyright>
+ Copyright (c) 2019 Fred Bricon
+ 
+ This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v2.0
+ which is available at http://www.eclipse.org/legal/epl-2.0.html
+   </copyright>
+
+   <license url="https://www.eclipse.org/legal/epl-2.0/">
+      Eclipse Public License - v 2.0
+   </license>
+
+   <requires>
+      <import feature="net.mihai-nita.ansicon" version="1.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.m2e.feature" version="1.8.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="m2e.chromatic.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
