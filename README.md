@@ -1,13 +1,7 @@
-This project is built using Eclipse Tycho (https://www.eclipse.org/tycho/) and requires at least maven 3.0 (http://maven.apache.org/download.html) to be built via CLI. 
-Simply run :
+[Maven launch participant](https://github.com/fbricon/m2e.colored.console/blob/66e005cd70ea2cb068663c8a763f53319dc02383/src/main/java/m2e/colored/console/ColoredMavenLaunchParticipant.java#L12-L22) enabling colored output when the [ANSI Escape in Console plugin](https://marketplace.eclipse.org/content/ansi-escape-console) is installed.
 
-    mvn install
+See [bug 544307](https://bugs.eclipse.org/bugs/show_bug.cgi?id=544307).
 
-The first run will take quite a while since maven will download all the required dependencies in order to build everything.
+<img width="1357" alt="screen shot 2019-02-11 at 6 33 30 pm" src="https://user-images.githubusercontent.com/148698/52601092-aea48600-2e2b-11e9-9514-600799ffe13b.png">
 
-In order to use the generated eclipse plugins in Eclipse, you will need m2e (https://www.eclipse.org/m2e) 
-and the m2eclipse-tycho plugin (https://github.com/tesla/m2eclipse-tycho/). Update sites to install these plugins : 
-
-* m2e stable update site : http://download.eclipse.org/technology/m2e/releases/
-* m2eclipse-tycho dev update site : http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/
-
+Install from this Eclipse update site: https://sidespin.github.io/m2e-chromatic/update/

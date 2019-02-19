@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>m2e.chromatic</artifactId>
 		<groupId>io.sidespin.eclipse</groupId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>m2e.chromatic.site</artifactId>
 	<packaging>eclipse-repository</packaging>

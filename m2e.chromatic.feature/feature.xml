@@ -2,7 +2,7 @@
 <feature
       id="m2e.chromatic.feature"
       label="M2E Chromatic Feature"
-      version="0.0.1.qualifier">
+      version="1.0.0.qualifier">
 
    <description>
       This feature enables colored output for m2e launch configurations, when the `ANSI Escape in Console` plugin is available.

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
    <feature url="features/m2e.chromatic.feature_0.0.0.jar" id="m2e.chromatic.feature" version="0.0.0">
-      <category name="M2E Chromatic"/>
+      <category name="m2e.chromatic"/>
    </feature>
    <feature url="features/m2e.chromatic.feature.source_0.0.0.jar" id="m2e.chromatic.feature.source" version="0.0.0">
-      <category name="M2E Chromatic Developer Resources"/>
+      <category name="m2e.chromatic.dev"/>
    </feature>
+   <category-def name="m2e.chromatic" label="M2E Chromatic"/>
+   <category-def name="m2e.chromatic.dev" label="M2E Chromatic Developer Resources"/>
 </site>

@@ -3,11 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.sidespin.eclipse</groupId>
   <artifactId>m2e.chromatic</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>M2E Chromatic :: parent</name>
   <description>M2E Chromatic parent</description>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -15,9 +14,26 @@
     <tycho.extras.version>1.3.0</tycho.extras.version>
     <tycho.test.platformArgs></tycho.test.platformArgs>
     <tycho.test.jvmArgs>-Xmx512m ${tycho.test.platformArgs}</tycho.test.jvmArgs>
-
+    <tycho.scmUrl>scm:git:https://github.com/sidespin/m2e-chromatic.git</tycho.scmUrl>
   </properties>
-
+  <inceptionYear>2019</inceptionYear>
+  <licenses>
+    <license>
+      <name>Eclipse Public License - v 2.0</name>
+      <url>http://www.eclipse.org/legal/epl-v20.html</url>
+    </license>
+  </licenses>
+  <issueManagement>
+    <url>https://github.com/sidespin/m2e-chromatic/issues</url>
+    <system>Github</system>
+  </issueManagement>
+  <developers>
+    <developer>
+      <id>fbricon</id>
+      <name>Fred Bricon</name>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
   <repositories>
     <repository>
       <id>2018-12</id>
@@ -25,9 +41,9 @@
       <url>http://download.eclipse.org/releases/2018-12</url>
     </repository>
     <repository>
-    	<id>mihai-nita</id>
-    	<layout>p2</layout>
-    	<url>https://www.mihai-nita.net/eclipse</url>
+      <id>mihai-nita</id>
+      <layout>p2</layout>
+      <url>https://www.mihai-nita.net/eclipse</url>
     </repository>
   </repositories>
   <build>
@@ -62,7 +78,6 @@
         </executions>
       </plugin>
     </plugins>
-
     <pluginManagement>
       <plugins>
         <plugin>
@@ -71,7 +86,17 @@
           <version>${tycho.version}</version>
           <configuration>
             <format>yyyyMMdd-HHmm</format>
+            <sourceReferences>
+              <generate>true</generate>
+            </sourceReferences>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.eclipse.tycho.extras</groupId>
+              <artifactId>tycho-sourceref-jgit</artifactId>
+              <version>${tycho.extras.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
@@ -80,7 +105,8 @@
           <configuration>
             <useUIHarness>true</useUIHarness>
             <argLine>${tycho.test.jvmArgs}</argLine>
-            <!-- kill test JVM if tests take more than 1 minute (60 seconds) to finish -->
+            <!-- kill test JVM if tests take more than 1 minute (60 seconds) to 
+							finish -->
             <forkedProcessTimeoutInSeconds>60</forkedProcessTimeoutInSeconds>
           </configuration>
         </plugin>
@@ -91,7 +117,9 @@
     <profile>
       <id>macosx</id>
       <activation>
-        <os><family>mac</family></os>
+        <os>
+          <family>mac</family>
+        </os>
       </activation>
       <properties>
         <tycho.test.platformArgs>-XstartOnFirstThread</tycho.test.platformArgs>
@@ -100,9 +128,9 @@
     <profile>
       <id>source-feature</id>
       <activation>
-      <file>
-        <exists>feature.xml</exists>
-      </file>
+        <file>
+          <exists>feature.xml</exists>
+        </file>
       </activation>
       <build>
         <plugins>
