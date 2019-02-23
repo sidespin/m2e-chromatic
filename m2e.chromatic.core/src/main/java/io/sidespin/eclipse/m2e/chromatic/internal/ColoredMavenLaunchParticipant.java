@@ -17,11 +17,13 @@ import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.sourcelookup.ISourceLookupParticipant;
 import org.eclipse.m2e.internal.launch.IMavenLaunchParticipant;
 
+@SuppressWarnings("restriction")
 public class ColoredMavenLaunchParticipant implements IMavenLaunchParticipant {
 
 	@Override
@@ -31,7 +33,12 @@ public class ColoredMavenLaunchParticipant implements IMavenLaunchParticipant {
 
 	@Override
 	public String getVMArguments(ILaunchConfiguration configuration, ILaunch launch, IProgressMonitor monitor) {
-		return "-Djansi.force=true";
+		StringBuilder vmArgs = new StringBuilder("-Djansi.force=true");
+		if (Platform.OS_WIN32.equals(Platform.getOS())) {
+			vmArgs.append(" -Djansi.passthrough=true");
+		}
+		return vmArgs.toString();
+		
 	}
 
 	@Override

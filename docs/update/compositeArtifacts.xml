@@ -4,10 +4,10 @@
     version="1.0.0">
     <properties size="2">
         <property name="p2.compressed" value="true" />
-        <property name="p2.timestamp" value="2" />
+        <property name="p2.timestamp" value="3" />
     </properties>
     <children size="2">
-        <child location="https://dl.bintray.com/sidespin/repo/m2e-chromatic/1.0.0/" />
+        <child location="https://dl.bintray.com/sidespin/repo/m2e-chromatic/1.0.1/" />
         <child location="http://www.mihai-nita.net/eclipse/" />
     </children>
 </repository>
