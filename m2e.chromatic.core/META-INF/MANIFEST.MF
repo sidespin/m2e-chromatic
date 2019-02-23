@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: M2E Chromatic Core Plugin
 Bundle-SymbolicName: m2e.chromatic.core;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.1.qualifier
 Require-Bundle:  org.eclipse.m2e.launching;bundle-version="1.8.0",
  org.eclipse.core.runtime,
  org.eclipse.debug.core

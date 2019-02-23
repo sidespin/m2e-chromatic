@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.sidespin.eclipse</groupId>
   <artifactId>m2e.chromatic</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>M2E Chromatic :: parent</name>
   <description>M2E Chromatic parent</description>
