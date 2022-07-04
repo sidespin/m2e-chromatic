@@ -17,7 +17,7 @@ _M2E Chromatic_ is available in the [Eclipse Marketplace](https://marketplace.ec
 Alternatively, in Eclipse:
 
 - open Help > Install New Software...
-- work with: `https://github.com/sidespin/m2e-chromatic/releases/download/latest/`
+- work with: `https://sidespin.github.io/m2e-chromatic/update/`
 - expand the category and select the JRE Discovery Feature
 - proceed with the installation
 - restart Eclipse

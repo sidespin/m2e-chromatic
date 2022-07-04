@@ -7,7 +7,7 @@
         <property name="p2.timestamp" value="3" />
     </properties>
     <children size="2">
-        <child location="../repository/" />
+        <child location="https://github.com/sidespin/m2e-chromatic/releases/download/1.0.1/" />
         <child location="https://www.mihai-nita.net/eclipse/" />
     </children>
 </repository>
