@@ -2,6 +2,9 @@
 
 M2E Chromatic
 -------------
+
+### :warning: This feature is now baked into m2e 2.x, therefore this repo is archived
+
 [Maven launch participant](https://github.com/fbricon/m2e.colored.console/blob/66e005cd70ea2cb068663c8a763f53319dc02383/src/main/java/m2e/colored/console/ColoredMavenLaunchParticipant.java#L12-L22) enabling colored output when the [ANSI Escape in Console plugin](https://marketplace.eclipse.org/content/ansi-escape-console) is installed.
 
 See [bug 544307](https://bugs.eclipse.org/bugs/show_bug.cgi?id=544307).
